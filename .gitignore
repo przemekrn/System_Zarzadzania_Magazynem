@@ -1,0 +1,43 @@
+# Ignoruj pliki kompilowane i pliki wynikowe kompilacji
+*.exe
+*.dll
+*.pdb
+*.log
+
+# Ignoruj katalogi wynikowe kompilacji
+bin/
+obj/
+
+# Ignoruj pliki konfiguracyjne Visual Studio
+.vscode/
+.suo
+.sln.docstates
+
+# Ignoruj pliki projektu i rozwiązania Visual Studio
+*.csproj.user
+*.suo
+*.user
+
+# Ignoruj katalogi zawierające pliki tymczasowe lub śmieciowe
+[Tt]emp/
+[Oo]bj/
+[Bb]in/
+
+# Ignoruj katalogi zawierające pliki z danymi użytkownika
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og*/
+_[Rr]e[Ss]harper*/
+
+# Ignoruj katalog .vs (Visual Studio)
+.vs/
+
+# Ignoruj katalog .idea (projekty IntelliJ IDEA)
+.idea/
+
+# Ignoruj pliki zawierające hasła i klucze API
+appsettings.json
+secrets.json
+
+# Ignoruj pliki i katalogi, które są tworzone podczas uruchamiania projektu
+launchSettings.json
+.vsdbg/

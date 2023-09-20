@@ -11,3 +11,9 @@ D:\vs2022\projekty\C#console\System Zarządzania Magazynem\System_Zarzadzania_Ma
 D:\vs2022\projekty\C#console\System Zarządzania Magazynem\System_Zarzadzania_Magazynem\System Zarządzania Magazynem\obj\Debug\System Zarządzania Magazynem.csproj.CoreCompileInputs.cache
 D:\vs2022\projekty\C#console\System Zarządzania Magazynem\System_Zarzadzania_Magazynem\System Zarządzania Magazynem\obj\Debug\System Zarządzania Magazynem.exe
 D:\vs2022\projekty\C#console\System Zarządzania Magazynem\System_Zarzadzania_Magazynem\System Zarządzania Magazynem\obj\Debug\System Zarządzania Magazynem.pdb
+D:\vs2022\projekty\C#console\System Zarządzania Magazynem\System_Zarzadzania_Magazynem\System Zarządzania Magazynem\bin\Debug\System Zarządzania Magazynem.exe.config
+D:\vs2022\projekty\C#console\System Zarządzania Magazynem\System_Zarzadzania_Magazynem\System Zarządzania Magazynem\bin\Debug\System Zarządzania Magazynem.exe
+D:\vs2022\projekty\C#console\System Zarządzania Magazynem\System_Zarzadzania_Magazynem\System Zarządzania Magazynem\bin\Debug\System Zarządzania Magazynem.pdb
+D:\vs2022\projekty\C#console\System Zarządzania Magazynem\System_Zarzadzania_Magazynem\System Zarządzania Magazynem\bin\Debug\Newtonsoft.Json.dll
+D:\vs2022\projekty\C#console\System Zarządzania Magazynem\System_Zarzadzania_Magazynem\System Zarządzania Magazynem\bin\Debug\Newtonsoft.Json.xml
+D:\vs2022\projekty\C#console\System Zarządzania Magazynem\System_Zarzadzania_Magazynem\System Zarządzania Magazynem\obj\Debug\System Zarządzania Magazynem.csproj.CopyComplete

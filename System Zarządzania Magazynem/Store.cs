@@ -1,26 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace System_Zarządzania_Magazynem
 {
-    public class Warehouse
+    public class Store
     {
         private Dictionary<int, Product> products = new Dictionary<int, Product>();
         private readonly object lockObject = new object();
 
-        public Warehouse()
+        public Store()
         {
             AddDefaultProducts();
         }
 
         private void AddDefaultProducts()
         {
-            products.Add(1, new Product { Id = 1, Name = "Laptop", Price = 1000, Quantity = 5 });
-            products.Add(2, new Product { Id = 2, Name = "Smartphone", Price = 500, Quantity = 8 });
-            products.Add(3, new Product { Id = 3, Name = "Telewizor", Price = 1500, Quantity = 3 });
+            products.Add(1, new Product { Id = 1, Name = "Monitor", Price = 300, Quantity = 10 });
+            products.Add(2, new Product { Id = 2, Name = "Klawiatura", Price = 50, Quantity = 20 });
+            products.Add(3, new Product { Id = 3, Name = "Myszka", Price = 30, Quantity = 15 });
         }
 
         public Product this[int productId]
@@ -44,7 +42,18 @@ namespace System_Zarządzania_Magazynem
         }
 
         public event EventHandler<ProductEventArgs> ProductAdded;
-        public event EventHandler<ProductEventArgs> ProductRemoved;
+
+        public Product GetAvailableProduct(int productId)
+        {
+            lock (lockObject)
+            {
+                if (products.ContainsKey(productId) && products[productId].Quantity > 0)
+                {
+                    return products[productId];
+                }
+                return null;
+            }
+        }
 
         public void AddProduct(Product product)
         {
@@ -62,34 +71,24 @@ namespace System_Zarządzania_Magazynem
             }
         }
 
-        public void RemoveProduct(int productId, int quantity)
-        {
-            lock (lockObject)
-            {
-                if (products.ContainsKey(productId))
-                {
-                    if (products[productId].Quantity >= quantity)
-                    {
-                        products[productId].Quantity -= quantity;
-                        if (products[productId].Quantity == 0)
-                        {
-                            products.Remove(productId);
-                        }
-                        OnProductRemoved(new ProductEventArgs(products[productId]));
-                    }
-                }
-            }
-        }
-
         public virtual void OnProductAdded(Product product)
         {
             ProductAdded?.Invoke(this, new ProductEventArgs(product));
         }
 
-        public virtual void OnProductRemoved(ProductEventArgs e)
+        public void RemoveProduct(int productId, int quantity)
         {
-            ProductRemoved?.Invoke(this, e);
+            lock (lockObject)
+            {
+                if (products.ContainsKey(productId) && products[productId].Quantity >= quantity)
+                {
+                    products[productId].Quantity -= quantity;
+                    if (products[productId].Quantity == 0)
+                    {
+                        products.Remove(productId);
+                    }
+                }
+            }
         }
     }
-
 }
